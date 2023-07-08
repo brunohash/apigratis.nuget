@@ -1,4 +1,4 @@
-# SDK Dotnet - APIGratis by API BRASIL
+# Pacote NuGet Dotnet - APIGratis by API BRASIL
 Conjunto de API, para desenvolvedores.
 
 Transforme seus projetos em soluções inteligentes com nossa API. Com recursos como API do WhatsApp, geolocalização, rastreamento de encomendas, verificação de CPF/CNPJ e mais, você pode criar soluções eficientes e funcionais.
