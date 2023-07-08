@@ -6,11 +6,11 @@ using System.Text.Json;
 
 namespace ApiBrasil
 {
-    public class ApiBrasil
+    public class GenericCaller
     {
         private readonly ApiBrasilConfiguration _config;
 
-        public ApiBrasil(IOptions<ApiBrasilConfiguration> config)
+        public GenericCaller(IOptions<ApiBrasilConfiguration> config)
         {
             _config = config.Value;
         }
