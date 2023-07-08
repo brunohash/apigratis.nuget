@@ -5,7 +5,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <Description>Api Brasil</Description>
-    <Version>1.1.4</Version>
+    <Version>1.1.6</Version>
     <iconUrl>https://apibrasil.com.br/frontend/img/logo.png</iconUrl>
   </PropertyGroup>
 

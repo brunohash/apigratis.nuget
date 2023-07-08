@@ -2,7 +2,6 @@
 {
     public class ApiBrasilConfiguration
     {
-        public const string Key = "ApiBrasilConfiguration";
         public string? SecretKey { get; set; }
         public string? PublicToken { get; set; }
         public string? DeviceToken { get; set; }
