@@ -4,8 +4,11 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Description>Api Brasil</Description>
-    <Version>1.1.6</Version>
+    <PackageId>ApiBrasil.Dotnet</PackageId>
+    <Company>Api Brasil</Company>
+    <Authors>Bruno Hashimoto</Authors>
+    <Description>Nuget para integração com os serviços da Api Brasil.</Description>
+    <Version>1.1.7</Version>
     <iconUrl>https://apibrasil.com.br/frontend/img/logo.png</iconUrl>
   </PropertyGroup>
 
