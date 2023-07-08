@@ -4,7 +4,7 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <PackageId>ApiBrasil.Dotnet</PackageId>
+    <PackageId>ApiBrasil</PackageId>
     <Company>Api Brasil</Company>
     <Authors>Bruno Hashimoto</Authors>
     <Description>Nuget para integração com os serviços da Api Brasil.</Description>
