@@ -1,5 +1,5 @@
 
-name: .NET 7 + Pack + Push no NuGet
+name: Pack and Push NuGet Package
 
 on:
   push:
