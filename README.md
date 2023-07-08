@@ -11,15 +11,6 @@ Transforme seus projetos em soluções inteligentes com nossa API. Com recursos 
 https://apibrasil.com.br/
 
 Uso 
-Adicione ao seu appsettings o seguinte objeto:
-```
-"ApiBrasilConfiguration":  {
-  "SecretKey": "mySecretKey",
-  "PublicToken": "myPublicToken",
-  "DeviceToken": "myDeviceToken",
-  "Authorization": "myAuthorization"
-}
-```
 
 AppSettings.Json
 ```
