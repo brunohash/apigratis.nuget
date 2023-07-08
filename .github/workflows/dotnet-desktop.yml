@@ -1,0 +1,30 @@
+
+name: .NET 7 + Pack + Push no NuGet
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  pack-push:
+    env:
+      CAMINHO_PROJETO: ./ApiBrasil/ApiBrasil.csproj
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET 7
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.101
+
+    - name: Geração do package
+      run: dotnet pack ${{ env.CAMINHO_PROJETO }} -c Release -o out
+
+    - name: Push no NuGet
+      run: |
+        cd out
+        dotnet nuget push *.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source ${{ secrets.NUGET_SERVER }} --skip-duplicate
