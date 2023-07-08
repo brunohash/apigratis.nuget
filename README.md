@@ -32,25 +32,32 @@ Example
 ```
 import ApiBrasil;
 
+private readonly ApiBrasilConfiguration _apiBrasil;
+
+public Construct(IOptions<ApiBrasilConfiguration> apibrasil)
+{
+    _apiBrasil = apibrasil.Value;
+}
+
 public class ApiBrasilDto
-    {
-        public string Type { get; set; }
-        public string Action { get; set; }
-        public string Content { get; set; }
-    }
+{
+    public string Type { get; set; }
+    public string Action { get; set; }
+    public string Content { get; set; }
+}
 
-    [HttpPost("v1/apibrasil")]
-    public async Task<IActionResult> TestApiBrasil([FromBody] ApiBrasilDto var)
+[HttpPost("v1/apibrasil")]
+public async Task<IActionResult> TestApiBrasil([FromBody] ApiBrasilDto var)
+{
+    try
     {
-        try
-        {
-            var result = await ApiBrasil.GenericCaller.Call(var.Type, var.Action, var.Content, _apiBrasil);
+        var result = await ApiBrasil.GenericCaller.Call(var.Type, var.Action, var.Content, _apiBrasil);
 
-            return Ok(result);
-        }
-        catch (Exception ex)
-        {
-            return StatusCode(500, ex);
-        }
+        return Ok(result);
     }
+    catch (Exception ex)
+    {
+        return StatusCode(500, ex);
+    }
+}
 ```
