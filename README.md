@@ -10,7 +10,7 @@ Transforme seus projetos em soluções inteligentes com nossa API. Com recursos 
 # Obtenha suas credenciais
 https://apibrasil.com.br/
 
-Uso 
+# Exemplo 
 
 AppSettings.Json
 ```
