@@ -11,7 +11,7 @@ namespace ApiBrasil
 {
     public static class GenericCaller
     {
-        public static async Task<string> Call(string type, string action, string content, ApiBrasilConfiguration config)
+        public static async Task<string> Call(string type, string action, object content, ApiBrasilConfiguration config)
         {
             var options = new RestClientOptions("https://cluster-01.apigratis.com")
             {
@@ -26,7 +26,8 @@ namespace ApiBrasil
             request.AddHeader("DeviceToken", config.DeviceToken ?? "");
             request.AddHeader("Authorization", $"Bearer {config.Authorization}");
             var body = content;
-            request.AddStringBody(body, "application/json");
+            //request.AddStringBody(body.ToString(), "application/json");
+            request.AddObject<object>(body);
 
             var response = await client.ExecuteAsync(request);
             return response.Content ?? "";
