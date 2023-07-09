@@ -15,7 +15,11 @@ namespace Tests
             // Arrange
             var type = "exampleType";
             var action = "exampleAction";
-            var content = "exampleContent";
+            var content = new
+            {
+                message = "oi"
+            };
+
             var config = new ApiBrasilConfiguration
             {
                 SecretKey = "exampleSecretKey",
