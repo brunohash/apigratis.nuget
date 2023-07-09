@@ -8,6 +8,9 @@ on:
       - synchronize
       - reopened
       - ready_for_review
+  push:
+    branches:
+      - main
 
 jobs:
   pack-push:
@@ -16,7 +19,7 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'main'
+    if: github.event.pull_request.merged == true || github.event_name == 'push'
 
     steps:
     - uses: actions/checkout@v2
