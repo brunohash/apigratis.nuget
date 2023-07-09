@@ -2,9 +2,6 @@ name: Pack and Push NuGet Package
 
 on:
   pull_request:
-    types:
-      - closed
-  push:
     branches:
       - main
 
@@ -13,9 +10,9 @@ jobs:
     env:
       CAMINHO_PROJETO: ./ApiBrasil/ApiBrasil.csproj
 
-    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'refs/heads/main'
 
-    if: ${{ github.event_name == 'pull_request' && github.event.pull_request.merged == true && github.head_ref == 'refs/heads/main' }} || ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
