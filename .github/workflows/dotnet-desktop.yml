@@ -1,11 +1,13 @@
-
 name: Pack and Push NuGet Package
 
 on:
-  push:
-    branches: [ main ]
   pull_request:
     branches: [ main ]
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - ready_for_review
 
 jobs:
   pack-push:
@@ -13,6 +15,8 @@ jobs:
       CAMINHO_PROJETO: ./ApiBrasil/ApiBrasil.csproj
 
     runs-on: ubuntu-latest
+
+    if: github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'main'
 
     steps:
     - uses: actions/checkout@v2
