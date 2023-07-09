@@ -3,8 +3,6 @@ using ApiBrasil.Domain;
 using Microsoft.Extensions.Options;
 using Microsoft.Extensions.Configuration;
 using System.Text.Json;
-using Microsoft.Extensions.Options;
-using RestSharp;
 using System.Threading.Tasks;
 
 namespace ApiBrasil
