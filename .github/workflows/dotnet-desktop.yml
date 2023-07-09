@@ -4,9 +4,12 @@ on:
   pull_request:
     types:
       - closed
+      - labeled
+      - synchronize
+      - reopened
   push:
     branches:
-    - main
+      - main
 
 jobs:
   pack-push:
@@ -15,7 +18,7 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    if: github.event.pull_request.merged == true && github.ref == 'refs/heads/main'
+    if: github.event_name == 'pull_request' && github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'refs/heads/main'
 
     steps:
       - uses: actions/checkout@v2
