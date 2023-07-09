@@ -43,7 +43,7 @@ public class ApiBrasilDto
 {
     public string Type { get; set; }
     public string Action { get; set; }
-    public string Content { get; set; }
+    public object Content { get; set; }
 }
 
 [HttpPost("v1/apibrasil")]
