@@ -23,6 +23,7 @@ namespace ApiBrasil
             request.AddHeader("PublicToken", config.PublicToken ?? "");
             request.AddHeader("DeviceToken", config.DeviceToken ?? "");
             request.AddHeader("Authorization", $"Bearer {config.Authorization}");
+            request.AddHeader("User-Agent", "APIBRASIL/NUGET-DOTNET");
             request.AddJsonBody(content);
 
             var response = await client.ExecuteAsync(request);

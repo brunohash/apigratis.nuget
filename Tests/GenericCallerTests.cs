@@ -2,8 +2,6 @@
 using FluentAssertions;
 using ApiBrasil;
 using ApiBrasil.Domain;
-using Microsoft.Extensions.Options;
-using System.Threading.Tasks;
 
 namespace Tests
 {
@@ -17,7 +15,8 @@ namespace Tests
             var action = "exampleAction";
             var content = new
             {
-                message = "oi"
+                number =  1,
+                text = "Olá"
             };
 
             var config = new ApiBrasilConfiguration
@@ -36,5 +35,28 @@ namespace Tests
             result.Should().BeOfType<string>();
             result.Should().NotBeEmpty();
         }
+
+        [Fact]
+        public async Task Call_ShouldThrowArgumentNullException()
+        {
+            // Arrange
+            var type = "exampleType";
+            var action = "exampleAction";
+            object? content = null; // Definir content como null para gerar ArgumentNullException
+            var config = new ApiBrasilConfiguration
+            {
+                SecretKey = "exampleSecretKey",
+                PublicToken = "examplePublicToken",
+                DeviceToken = "exampleDeviceToken",
+                Authorization = "exampleAuthorization"
+            };
+
+            // Act
+            Func<Task> func = async () => await GenericCaller.Call(type, action, content, config);
+
+            // Assert
+            await func.Should().ThrowAsync<ArgumentNullException>();
+        }
+
     }
 }
