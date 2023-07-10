@@ -2,11 +2,10 @@ name: Pack and Push NuGet Package
 
 on:
   pull_request:
+    branches:
+      - main
     types:
       - closed
-      - labeled
-      - synchronize
-      - reopened
   push:
     branches:
       - main
@@ -18,7 +17,7 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    if: github.event.pull_request.merged == true || github.event.pull_request.base.ref == 'refs/heads/main'
+    if: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.ref == 'refs/heads/main' && github.event.pull_request.merged == true }} || ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
 
     steps:
       - uses: actions/checkout@v2
