@@ -21,8 +21,6 @@ namespace Tests
 
             var config = new ApiBrasilConfiguration
             {
-                SecretKey = "exampleSecretKey",
-                PublicToken = "examplePublicToken",
                 DeviceToken = "exampleDeviceToken",
                 Authorization = "exampleAuthorization"
             };
@@ -45,8 +43,6 @@ namespace Tests
             object? content = null; // Definir content como null para gerar ArgumentNullException
             var config = new ApiBrasilConfiguration
             {
-                SecretKey = "exampleSecretKey",
-                PublicToken = "examplePublicToken",
                 DeviceToken = "exampleDeviceToken",
                 Authorization = "exampleAuthorization"
             };
