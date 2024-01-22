@@ -3,9 +3,9 @@ using ApiBrasil.Domain;
 
 namespace ApiBrasil
 {
-    public static class GenericCaller
+    public static class ApiBrasilCommunity
     {
-        public static async Task<string> Call(string type, string action, object content, ApiBrasilConfiguration config)
+        public static async Task<string> ApiBrasilCaller(string type, string action, object content, ApiBrasilConfiguration config)
         {
             var options = new RestClientOptions("https://gateway.apibrasil.io")
             {
