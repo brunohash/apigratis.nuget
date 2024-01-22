@@ -8,7 +8,7 @@
     <Company>Api Brasil</Company>
     <Authors>Bruno Hashimoto</Authors>
     <Description>Nugget para integração com os serviços da Api Brasil.</Description>
-    <Version>2.0.2</Version>
+    <Version>2.0.3</Version>
     <iconUrl>https://apibrasil.io/frontend/img/logo.png</iconUrl>
   </PropertyGroup>
 
