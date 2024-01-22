@@ -1,7 +1,7 @@
 ﻿using Xunit;
 using FluentAssertions;
-using ApiBrasil;
-using ApiBrasil.Domain;
+using ApiBrasilNugget;
+using ApiBrasilNugget.Domain;
 
 namespace Tests
 {
@@ -26,7 +26,7 @@ namespace Tests
             };
 
             // Act
-            var result = await ApiBrasilCommunity.ApiBrasilCaller(type, action, content, config);
+            var result = await ApiBrasil.Caller(type, action, content, config);
 
             // Assert
             result.Should().NotBeNull();
@@ -40,7 +40,7 @@ namespace Tests
             // Arrange
             var type = "exampleType";
             var action = "exampleAction";
-            object content = null; // Definir content como null para gerar ArgumentNullException
+            object? content = null; // Definir content como null para gerar ArgumentNullException
             var config = new ApiBrasilConfiguration
             {
                 DeviceToken = "exampleDeviceToken",
@@ -48,7 +48,7 @@ namespace Tests
             };
 
             // Act
-            Func<Task> func = async () => await ApiBrasilCommunity.ApiBrasilCaller(type, action, content, config);
+            Func<Task> func = async () => await ApiBrasil.Caller(type, action, content, config);
 
             // Assert
             await func.Should().ThrowAsync<ArgumentNullException>();

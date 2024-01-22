@@ -1,4 +1,4 @@
-﻿namespace ApiBrasil.Domain
+﻿namespace ApiBrasilNugget.Domain
 {
     public class ApiBrasilConfiguration
     {

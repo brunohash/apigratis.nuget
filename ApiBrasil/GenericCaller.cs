@@ -1,7 +1,7 @@
 ﻿using RestSharp;
-using ApiBrasil.Domain;
+using ApiBrasilNugget.Domain;
 
-namespace ApiBrasil
+namespace ApiBrasilNugget
 {
     public static class ApiBrasil
     {
