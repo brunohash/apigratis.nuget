@@ -7,9 +7,9 @@
     <PackageId>ApiBrasil</PackageId>
     <Company>Api Brasil</Company>
     <Authors>Bruno Hashimoto</Authors>
-    <Description>Nuget para integração com os serviços da Api Brasil.</Description>
-    <Version>1.2.1</Version>
-    <iconUrl>https://apibrasil.com.br/frontend/img/logo.png</iconUrl>
+    <Description>Nugget para integração com os serviços da Api Brasil.</Description>
+    <Version>2.0.0</Version>
+    <iconUrl>https://apibrasil.io/frontend/img/logo.png</iconUrl>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
