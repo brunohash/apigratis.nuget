@@ -15,8 +15,6 @@ https://apibrasil.com.br/
 AppSettings.Json
 ```
 "ApiBrasilConfiguration": {
-        "SecretKey": "mySecretKey",
-        "PublicToken": "myPublicToken",
         "DeviceToken": "myDeviceToken",
         "Authorization": "myAuthorization"
     }
